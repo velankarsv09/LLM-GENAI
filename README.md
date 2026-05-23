@@ -57,8 +57,39 @@ An interactive Q&A system that answers questions about any document using Retrie
 
 ---
 
-## Phase 3 — Agents & Tool Use (coming soon)
-Agentic workflows using LangChain agents and tool use.
+## Phase 3 — Agentic RAG App
+A hybrid AI agent combining RAG with tool-calling. The agent autonomously decides which tools to use, chains multiple tools in sequence, and maintains memory across conversation turns.
+
+### What it does
+- Creates custom tools using the `@tool` decorator
+- Builds an agent that chooses between tools autonomously
+- Wraps the full RAG pipeline as an agent tool
+- Chains multiple tools in sequence to complete complex goals
+- Maintains conversation memory across multiple turns
+- Interactive CLI agent — ask anything, the agent figures out the steps
+
+### Stack
+- Python
+- LangChain + LangGraph
+- ChromaDB
+- HuggingFace Embeddings (all-MiniLM-L6-v2)
+- Groq API (Qwen3-32B)
+
+### Tools built
+- `calculate` — math evaluation
+- `get_ai_info` — knowledge lookup
+- `word_count` — string analysis
+- `search_documents` — RAG retrieval tool
+- `summarize_text` — LLM summarization tool
+- `answer_from_document` — full RAG pipeline as a single tool
+
+### Skills covered
+- Custom tool creation and docstring engineering
+- Agent reasoning and autonomous tool selection
+- Multi-tool chaining
+- RAG + Agent hybrid architecture
+- Conversation memory management
+- Interactive agentic CLI application
 
 ---
 
